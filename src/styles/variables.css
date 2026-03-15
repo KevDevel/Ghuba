@@ -1,0 +1,41 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --soft-black: #121212;
+    --soft-withe: #fefefe;
+    --superficial-black: #2f2f2f;
+
+    /* dark theme */
+    --bg-color: var(--soft-black);
+    --main-text: var(--soft-withe);
+
+
+    /* btn styles */
+    --btn-yellow: #FFA800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    color: var(--main-text);
+    background-color: var(--bg-color);
+}
+
+.main__container {
+    
+}
+
+p  {
+    font-family: League Spartan, Arial;
+    color: #fff;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}

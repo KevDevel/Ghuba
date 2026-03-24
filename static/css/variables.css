@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --soft-black: #121212;
+    --soft-white: #e0e0e0;
+    --superficial-black: #1e1e1e;
+
+    /* dark theme */
+    --bg-color: var(--soft-black);
+    --main-text: var(--soft-white);
+
+
+    /* btn styles */
+    --btn-yellow: #FFA800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    position: relative;
+    color: var(--main-text);
+    background-color: var(--bg-color);
+}
+
+p  {
+    font-family: League Spartan, Arial;
+    color: var(--main-text);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-text);
+}
+
+.material-symbols-outlined {
+    display: inline-block; /* Asegura que ocupe espacio */
+    font-size: 24px;       /* Tamaño estándar */
+    color: var(--soft-white);
+    fill: #e0e0e0;
+}

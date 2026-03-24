@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hugame</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/variables.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/layer.css') }}">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu,mic,search" />
+
+</head>
+
+<body>
+  <header>
+    <div class="header__left">
+      <button class="menu-btn">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <a href="{{ url_for('home') }}">
+        <svg class="logo" viewBox="0 0 39 39" fill="#fefefe" width="35px">
+          <path d="M39 24H24V6H6V24H24V39H0V6H6V0H39V24Z" />
+        </svg>
+        <h1 class="header__title">Hugame</h1>
+      </a>
+    </div>
+    <div class="header__middle">
+      <form action="/buscar" method="GET">
+        <input class="search-bar" type="search" list="suggested-search" name="q" placeholder="Search">
+        <datalist id="suggested-search">
+          <option value="EA FC 26"></option>
+          <option value="Red Dead Redemption 2"></option>
+          <option value="Amazing Spider Man 2"></option>
+          <option value="God of War Ragnarok"></option>
+          <option value="Need for Speed Unbound"></option>
+          <option value="Forza Horizon 5"></option>
+        </datalist>
+        <button class="search-btn" type="submit">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+      </form>
+      <button class="voice-search-btn">
+        <span class="material-symbols-outlined">mic</span>
+      </button>
+    </div>
+    <div class="header__right">
+      <div class="nav__item">
+        <img class="nav__item-icon" src="./assets/icons/language.svg" />
+        <span class="nav__item-badge">3</span>
+        <span class="nav__item-tooltip">Language</span>
+      </div>
+
+      <div class="nav__item">
+          <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank" class="btn nav__item-login">Login</a>
+      </div>
+
+      <div class="nav__item">
+        <button class="btn nav__item-download">Download</button>
+      </div>
+    </div>
+  </header>
+  <main class="main__container">
+    <aside class="sidebar">
+      <nav class="sidebar__nav">
+        <a href="./" class="sidebar__link">
+          <img class="sidebar__icon" src="{{ url_for('static', filename='icons/home.svg') }}" />
+          <span class="sidebar__label">Home</span>
+        </a>
+        <a href="./" class="sidebar__link">
+          <img class="sidebar__icon" src="{{ url_for('static', filename='icons/explore.svg') }}" />
+          <span class="sidebar__label">Explore</span>
+        </a>
+        <a href="./" class="sidebar__link">
+          <img class="sidebar__icon" src="{{ url_for('static', filename='icons/subscriptions.svg') }}" />
+          <span class="sidebar__label">Subscriptions</span>
+        </a>
+        <a href="./" class="sidebar__link">
+          <img class="sidebar__icon" src="{{ url_for('static', filename='icons/favorite.svg') }}" />
+          <span class="sidebar__label">Favorite</span>
+        </a>
+        <a href="./" class="sidebar__link">
+          <img class="sidebar__icon" src="{{ url_for('static', filename='icons/shopping_cart.svg') }}" />
+          <span class="sidebar__label">Shoping Cart</span>
+        </a>
+        <a href="./" class="sidebar__link">
+          <img class="sidebar__icon" src="{{ url_for('static', filename='icons/library.svg') }}" />
+          <span class="sidebar__label">Library</span>
+        </a>
+      </nav>
+    </aside>
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <ul>
+
+    </ul>
+
+    <ul>
+      
+    </ul>
+  </footer>
+</body>
+
+</html>

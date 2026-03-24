@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="video-grid">
+    {% for card in cards %}
+    <article class="card">
+        <div class="card__header">
+          <a class="card__link" href="">
+            <img class="card__thumb" src="{{ url_for('static', filename=card.thumb) }}" />
+            <span class="card__price">${{ card.price }}</span>
+          </a>
+        </div>
+        <div class="card__body">
+          <div class="card__brand">
+            <img class="card__logo" src="{{ url_for('static', filename=card.logo) }}" />
+          </div>
+          <div class="card__info">
+            <h3 class="card__title">{{ card.title }}</h3>
+            <p class="card__author">{{ card.author }}</p>
+            <p class="card__meta">{{ card.meta }}</p>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+</section>
+{% endblock %}

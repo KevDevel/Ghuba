@@ -1,0 +1,142 @@
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    background-color: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px 5px var(--superficial-black);
+    z-index: 50;
+}
+
+.header__left, 
+.header__right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    width: clamp(250px, 100%, 300px);
+}
+
+.nav__item-login {
+    width: 100px;
+    background-color: black;
+}
+
+
+
+.nav__item-tooltip {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateY(-50%);
+    
+    background-color: blue;
+    color: var(--main-text);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+    z-index: 10;
+}
+
+.nav__item:hover .nav__item-tooltip {
+    display: block;
+}
+
+/* left */
+
+.header__left {
+    margin-left: 18px;
+}
+
+.header__left a {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+.header__left h1{
+    display: inline-block;
+    flex: 1;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+/* middle section */
+
+header .header__middle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__middle form {
+    display: flex;
+    align-items: center;
+    width: clamp(300px, 100%, 500px);
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header__middle .search-bar {
+    flex: 1;
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 18px 0 0 18px;
+
+    font-size: medium;
+    border: 2px solid var(--superficial-black);
+    background-color: var(--bg-color);
+}
+
+.header__middle input::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    cursor: pointer;
+    
+}
+  
+.header__middle .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    border: none;
+    border-radius: 0 18px 18px 0;
+    cursor: pointer;
+    
+    background-color: var(--superficial-black)
+}
+
+header .voice-search-btn {
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--superficial-black);
+}

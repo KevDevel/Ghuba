@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="auth-container">
+    <div class="auth-box">
+        <h2>Log In</h2>
+
+        <form method="POST" action="{{ url_for('login') }}">
+            <label for="email">Email:
+                <input type="email" id="email" name="email" placeholder="jhondoe@example.com" required>
+            </label>
+            <label for="password">Password
+                <input type="password" id="password" name="password" required>
+            </label>
+
+            <button type="submit" class="auth-btn">Enter</button>
+        </form>
+
+        <p class="auth-switch">Don't have an account <a href="{{ url_for('signup') }}">Create One</a></p>
+    </div>
+</section>
+{% endblock %}
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Hugame</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/variables.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/layer.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+<body>
+  <section class="auth-container">
+    <div class="auth-box">
+        <h2>Log In</h2>
+
+        <form method="POST" action="{{ url_for('login') }}">
+            <label for="email">Email:
+                <input class="valid" type="email" id="email" name="email" placeholder="jhondoe@example.com" required>
+            </label>
+            <label for="password">Password
+                <input class="valid" type="password" id="password" name="password" required>
+            </label>
+
+            <button type="submit" class="auth-btn">Enter</button>
+        </form>
+
+        <p class="auth-switch">Don't have an account <a href="{{ url_for('signup') }}">Create One</a></p>
+    </div>
+</section>
+</body>
+</html>

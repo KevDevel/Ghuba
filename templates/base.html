@@ -7,6 +7,8 @@
   <title>Hugame</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/variables.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/layer.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,11 +56,11 @@
       </div>
 
       <div class="nav__item">
-          <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank" class="btn nav__item-login">Login</a>
+          <a href="{{ url_for('login') }}" class="btn nav__item-login">Login</a>
       </div>
 
       <div class="nav__item">
-        <button class="btn nav__item-download">Download</button>
+          <a href="{{ url_for('signup') }}" class="btn nav__item-signup">SignUp</a>
       </div>
     </div>
   </header>

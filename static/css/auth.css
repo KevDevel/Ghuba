@@ -72,7 +72,7 @@
   flex-direction: column;
 
   color: #ffffff;
-  background-color: #00E676;
+  background-color: var(--btn-yellow);
   border: none;
   border-radius: 9px;
   transition: all .3s ease;
@@ -80,7 +80,7 @@
 
 .auth-btn:hover {
   transform: scale(1.03);
-  background-color: #a9e9a4;
+  background-color: #ffc551;
 }
 
 .auth-switch {
@@ -91,7 +91,7 @@
   white-space: nowrap;
   text-decoration: none;
   color: #ffffff;
-  background-color: #5555ee;
+  background-color: var(--superficial-black);
   padding: 5px 8px;
   border-radius: 9px;
 }

@@ -1,2 +1,2 @@
-# Ghuba
-just a copy
+# TGBlock
+just a school proyect
